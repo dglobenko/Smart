@@ -1,6 +1,5 @@
-package com.smartdiff.demo;
+package com.smartdiff.services;
 
-import com.smartdiff.services.SmartDiffService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -11,11 +10,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.util.Assert;
 
 import java.io.IOException;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
@@ -31,7 +28,7 @@ public class SmartDiffServiceTests {
 	@Value("classpath://sample-3.html")
 	Resource sample3;
 	@Value("classpath://sample-4.html")
-	Resource sample4;
+    Resource sample4;
 
 	@Autowired
 	SmartDiffService smartDiffService;
